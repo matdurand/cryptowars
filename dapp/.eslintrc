@@ -1,0 +1,60 @@
+{
+  "extends": [
+    "react-app",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "globals": {
+    "fixture": true
+  },
+  "rules": {
+    "arrow-body-style": [2, "as-needed"],
+    "import/no-unresolved": 2,
+    "max-len": [
+      2,
+      120,
+      {
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true,
+        "ignorePattern": "^import"
+      }
+    ],
+    "no-console": 1,
+    "prefer-template": 2,
+    "react/prop-types": 0,
+    "react/require-default-props": [
+      1,
+      {
+        "forbidDefaultForRequired": true
+      }
+    ],
+    "react/require-extension": 0,
+    "react/self-closing-comp": 0,
+    "require-yield": 0
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    },
+    "react": {
+      "version": "16.6.3"
+    }
+  }
+}

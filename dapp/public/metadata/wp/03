@@ -1,0 +1,12 @@
+{
+  "description": "Cryptowars Frost Sword", 
+  "image": "http://cryptowars.fun/assets/wp/frost-sword.png", 
+  "name": "Frost Sword",
+  "attributes": [
+    {
+      "display_type": "number", 
+      "trait_type": "attackPower", 
+      "value": 18
+    }
+  ] 
+}

@@ -1,0 +1,12 @@
+{
+  "description": "Cryptowars Basic Sword",
+  "image": "http://cryptowars.fun/assets/wp/basic-sword.png",
+  "name": "Basic sword",
+  "attributes": [
+    {
+      "display_type": "number",
+      "trait_type": "attackPower",
+      "value": 5
+    }
+  ]
+}

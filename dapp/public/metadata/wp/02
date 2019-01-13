@@ -1,0 +1,12 @@
+{
+  "description": "Cryptowars Soul Reaper Sword", 
+  "image": "http://cryptowars.fun/assets/wp/soul-reaper.png", 
+  "name": "Soul Reaper",
+  "attributes": [
+    {
+      "display_type": "number", 
+      "trait_type": "attackPower", 
+      "value": 14
+    }
+  ]
+}
