@@ -1,0 +1,15 @@
+theme-background: ["linear-gradient(180deg, white 75%, black 25%)"]
+theme-headline: ["Montserrat", "#9a9a9a", "none"]
+theme-byline: ["Montserrat", "#9a9a9a", "none"]
+theme-text: ["Raleway", "#9a9a9a", "none"]
+theme-links: ["#9a9a9a", "#9a9a9a"]
+theme-code: ["Fira Code"]
+theme-controls: ["#9a9a9a"]
+theme-margins: ["0", "15px"]
+highlight: tomorrow
+theme-override: pitch/css/PITCHME.css
+logo: pitch/cabane.png
+logo-position: top-left
+layout: center
+published: true
+code-line-numbers : true

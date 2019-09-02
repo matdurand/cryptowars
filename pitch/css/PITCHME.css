@@ -1,0 +1,36 @@
+/*
+ * Custom sizing for sample code slide - adjust as needed.
+ */
+.reveal code {
+  font-size: 1.1em;
+  line-height: 1.1em;
+}
+
+.shadow {
+  box-shadow: 0 14px 20px 0 rgba(0, 0, 0, 0.2),
+    0 10px 24px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.color-cyan {
+  color: #00bcd4;
+}
+
+.color-green {
+  color: #8bc34a;
+}
+
+.color-purple {
+  color: #d500f9;
+}
+
+.color-blue {
+  color: #2196f3;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-red {
+  color: red;
+}
