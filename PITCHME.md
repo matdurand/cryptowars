@@ -9,101 +9,173 @@ Présenté par @css[color-cyan](**Mathieu Durand**)
 Hexira
 @snapend()
 
----?image=pitch/back-green.png
+---?image=pitch/back-cyan.png
 
 @snap[west text-left span-70]
-@css[text-18](** @css[color-green](DÉFINITIONS) **)
+@css[text-18](**Comment vendre ~~un chat~~ @css[color-red](des armes) 140k sur @css[color-cyan](ETHEREUM)**)
+@snapend()
+
+@snap[text-05 south-west text-left]
+Présenté par @css[color-cyan](**Mathieu Durand**)
+Hexira
+@snapend()
+
+---
+
+![](https://rinkeby-storage.opensea.io/0xe10ab1b1b344a3df71f31aaf2ea4a836a65b8dbc-preview/3-1568762678.png)
+![](https://rinkeby-storage.opensea.io/0xe10ab1b1b344a3df71f31aaf2ea4a836a65b8dbc-preview/1-1568682832.png)
+![](https://rinkeby-storage.opensea.io/0xe10ab1b1b344a3df71f31aaf2ea4a836a65b8dbc-preview/0-1568682837.png)
+
+---
+@snap[midpoint span-80]
+![Never gonna work](https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/917284.png)
+@snapend()
+@snap[south span-80]
+** @css[color-red](DREAM ON BUDDY <br> THIS IS NEVER GONNA WORK) **
+@snapend()
+
+---
+@snap[midpoint span-80]
+![Never gonna work](https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/917284.png)
+@snapend()
+@snap[south span-80]
+** @css[color-red](NOPE <br> NOT A CHANCE) **
 @snapend()
 
 ---?image=pitch/back-green.png
 
 @snap[west text-left span-70]
-@css[text-18](**C'est quoi une @css[color-green](chaine de block?)**)
+@css[text-18](** Bon, <br> @css[color-green](ON VEND QUOI?) **)
 @snapend()
 
 ---?image=pitch/back-green.png
 
 @snap[west text-left span-70]
-@css[text-18](**C'est quoi un @css[color-green](contrat intelligent?)**)
+@css[text-18](**Des @css[color-green](TOKENS!!)**)
 @snapend()
 
----?image=pitch/back-blue.png
+
+---?image=pitch/back-green.png
+
+@snap[north-west text-left span-70]
+@css[text-08](**Des TOKENS**)
+@snapend()
 
 @snap[west text-left span-70]
-@css[text-18](** @css[color-blue](ETHEREUM) **)
+@css[text-18](ERC-@css[color-green](20)?)
 @snapend()
 
----?image=pitch/back-blue.png
+---?image=pitch/back-green.png
+
+@snap[north-west text-left span-70]
+@css[text-08](**Des TOKENS**)
+@snapend()
 
 @snap[west text-left span-70]
-@css[text-18](**C'est une @css[color-blue](MACHINE VIRTUELLE DÉCENTRALISÉ) **)
+@css[text-18](~~ERC-@css[color-green](20)~~)
+@css[text-18](ERC-@css[color-green](721)?)
 @snapend()
 
----?image=pitch/back-blue.png
+---
+@snap[midpoint span-80]
+![Never gonna work](https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/1503657.png)
+@snap[south span-80]
+** @css[color-purple](ERC-721 ... pffff. <br>Personne ne va hésiter entre moi et une épée) **
+@snapend()
+
+---?image=pitch/back-purple.png
 
 @snap[west text-left span-70]
-@css[text-18](**@css[color-blue](L'ETHER) est la monnaie du réseau **)
+@css[text-18](**3h plus tard**)
 @snapend()
 
----?image=pitch/back-blue.png
-
-@snap[west text-left span-70]
-@css[text-18](**Une @css[color-blue](ADRESSE) identifie un compte ou un contrat**)
-0xbe0eb53f46cd790cd13851d5eff43d12404d33e8
-@snapend()
-
----?image=pitch/back-blue.png
-
-@snap[west text-left span-70]
-@css[text-18](** @css[color-blue](CODE DU CONTRAT) **)
-@snapend()
-
----?code=pitch/src/msg.js&lang=js
+---?code=pitch/src/weapon-contract.sol&lang=js
 
 @snap[north-east span-50 text-06 text-gray]
-Variables globales
-@snapend
-
----?code=pitch/src/simple-contract.sol&lang=js
-
-@snap[north-east span-50 text-06 text-gray]
-Contrat intelligent avec Solidity
+Vendre des armes avec Solidity
 @snapend
 
 @snap[south span-100 text-08 color-green]
-@[1](Utilisation de packages existant)
-@[3](Comme une classe en JS, mais c'est un contrat)
-@[5](Une simple variable membre)
-@[6](La valeur monnaitaire `ether` fait partie du langage)
-@[8](Un `event` est lancé par le contract à tous ceux qui écoutent)
-@[10,11](`mapping` est une simple hashmap)
-@[10,11](`address` est un concept fort de Ethereum qui permet d'identifier un intervenant)
-@[13-19]()
-@[21-25](un `modifier` qui permet de sortir des préconditions de fonctions)
-@[27-33](Une simple fonction)
-@[28](`hasRequiredPayment` est un modifier. on peut coder nos propre modifiers)
-@[28](`payable` indique que la fonction va recevoir de l'ether)
-@[29-31]
-@[32](on émet une événement quand notre code est terminé)
+@[1-2](Utilisation de packages existants)
+@[4](Comme une classe en JS, mais c'est un contrat)
+@[6](Un `event` est lancé par le contrat à tous ceux qui écoutent)
+@[8-11]()
+@[13](La liste complète des armes)
+@[15-16](Le titre et le nom de notre TOKEN)
+@[17-27](Le coeur de notre contrat)
+@[22-23](Création de la structure de l'arme)
+@[24](_mint instancie le TOKEN (ERC-721))
+@[25](Le URI du TOKEN, qui permet d'obtenir son metadata)
+@[26-27](On avertit tout le monde... c'est le temps d'acheter)
+@[37-45](La version public, pour créer les armes bas de gamme)
+@[47-52](La version public, pour créer le good stuff)
+@[54-57](Les armes de quelqu'un en particulier)
+@[59-71](Les specs d'une arme précise)
 @snapend
 
 ---?image=pitch/back-blue.png
 
 @snap[west text-left span-70]
-@css[text-18](** CODE POUR @css[color-blue]( APPELER UN CONTRAT) **)
+@css[text-18](**  **)
+@css[text-18](** Ok, maintenant <br>@css[color-blue](COMMENT ON ACHÈTE?) **)
 @snapend()
 
+---?image=pitch/back-blue.png
 
----?code=pitch/src/web3.sol&lang=js
+@snap[west text-left span-70]
+@css[text-18](**15 min plus tard**)
+[@css[color-blue](**Opensea**)](https://rinkeby.opensea.io/assets/cryptowars-marketplace)
+@snapend()
+
+---?image=pitch/back-cyan.png
+
+@snap[west text-left span-70]
+@css[text-18](**  **)
+@css[text-18](** Ok, mais <br>@css[color-cyan](C'EST QUOI LE JEU?) **)
+@snapend()
+
+---?image=pitch/back-cyan.png
+
+@snap[west text-left span-70]
+@css[text-18](**5h15 plus tard**)
+[@css[color-cyan](**Cryptowars**)](http://cryptowars.fun/?account=0x8dac237e839d09b7e82d9190314d52e90d2c9794078f039971da5b99764ebc21)
+@snapend()
+
+---?image=pitch/back-cyan.png
+@snap[north-west]
+@css[text-18](**Les morceaux**)
+@snapend
+
+@snap[west]
+<br>
+@ul
+- Un contrat pour les guerriers
+  - Créer un guerrier
+  - Lancer un duel
+  - Accepter un duel
+  - Une interface avec le contrat des armes
+- Une application React
+@ulend
+@snapend
+
+---?code=pitch/src/inter-contract.sol&lang=js
 
 @snap[north-east span-50 text-06 text-gray]
-La fonction que nous allons appeler
+Appel d'un contrat à partir d'un autre
+@snapend
+
+@snap[south span-100 text-08 color-green]
+@[1-9](L'interface du contrat distant)
+@[11](Notre contrat de guerrier)
+@[13](L'instance de notre contrat distant)
+@[15-18](Initialisation de notre instance)
+@[20-23](Appel d'une fonction de notre contrat)
 @snapend
 
 ---?code=pitch/src/web3.js&lang=js
 
 @snap[north-east span-50 text-06 text-gray]
-Appel d'un contrat intelligent avec Web3
+Application React: <br>Appel d'un contrat intelligent avec Web3
 @snapend
 
 @snap[south span-100 text-08 color-green]
@@ -113,80 +185,176 @@ Appel d'un contrat intelligent avec Web3
 @[11-13]
 @snapend
 
----?image=pitch/back-purple.png
-
-@snap[west text-left span-70]
-@css[text-18](** @css[color-purple](FONDATION DES CONTRATS INTELLIGENTS) **)
+---
+@snap[midpoint span-80]
+![Never gonna work](https://i.pinimg.com/originals/d4/d5/99/d4d5997b19939576efdaff44d6eb7bfb.png)
+@snapend()
+@snap[north span-80]
+<br>
+** @css[color-purple](Euh, je viens de tester) **
+@snapend()
+@snap[south span-80]
+** @css[color-purple](ET C'EST VRAIMENT LENT!!!) **
+<br>
 @snapend()
 
 ---?image=pitch/back-purple.png
 
 @snap[west text-left span-70]
-@css[text-18](** Transactions par @css[color-purple](SECONDE) **)
-- 15 transactions par secondes
+@css[text-18 color-purple](** Premier problème**)
+- 15 transactions par seconde
 - Un bloc par 10 secondes
 @snapend()
 
 ---?image=pitch/back-purple.png
 
 @snap[west text-left span-70]
-@css[text-18](** Penser @css[color-purple](DÉTERMINISTE)**)
+@css[text-18 color-purple](**Solution?**)
+<br>
+@ul
+- Faire une prière?
+- Ajouter des animations partout?
+- Si quelqu'un ici est bon en animation ...
+@ulend
+@snapend()
+
+---
+@snap[midpoint span-80]
+![Never gonna work](https://www.cryptokitties.co/images/kitty-confused-banner.svg)
+@snapend()
+@snap[north span-80]
+<br>
+** @css[color-purple](Btw, ça l'air qui a pas de random <br>sur ETHEREUM) **
+@snapend()
+@snap[south span-80]
+** @css[color-purple](Donc les combats sont pipés?) **
+<br><br>
+@snapend()
+
+---?image=pitch/back-purple.png
+
+@snap[west text-left span-70]
+@css[text-18](**@css[color-purple](Deuxième problème)**)
 - Une transaction doit avoir tout ce dont elle a besoin pour s'exécuter
-@snapend()
-
----?image=pitch/back-purple.png
-
-@snap[west text-left span-50]
-@css[text-18](** Prévoir les @css[color-purple](MISE À JOUR)**)
+- Donc random n'existe effectivement pas
 @snapend()
 
 ---?image=pitch/back-purple.png
 
 @snap[west text-left span-70]
-@css[text-18](** Attention aux @css[color-purple](LIMITES) **)
+@css[text-18](** @css[color-purple](Solutions?)**)
+<br>
+@ul
+- Faker un random? 
+- Utiliser le timestamp du block?
+- Utiliser un Oracle?
+@ulend
+@snapend()
+
+---
+@snap[midpoint span-80]
+![Never gonna work](http://cdn.cnn.com/cnnnext/dam/assets/180302150409-cryptokitties-1.jpg)
+@snapend()
+@snap[north span-80]
+<br>
+** @css[color-purple](Houston we have a problem) **
+@snapend()
+@snap[south span-80]
+** @css[color-purple](Ya clairement un bug, j'ai gagné le combat, mais il se passe rien) **
+@snapend()
+
+---?image=pitch/back-purple.png
+
+@snap[west text-left span-80]
+@css[text-18](**@css[color-purple](Troisième problème)**)
+Comment on met ça à jour un contrat immuable?
 @snapend()
 
 ---?image=pitch/back-purple.png
 
 @snap[west text-left span-70]
-@css[text-18](** Utiliser les @css[color-purple](STANDARDS) **)
+@css[text-18](** @css[color-purple](Solutions?)**)
+<br>
+@ul
+- Séparer les contrats?
+- S'ouvrir des portes pour modifier les données?
+- Utiliser un framework?
+@ulend
+@snapend()
+
+---
+@snap[midpoint span-80]
+![Never gonna work](https://static.wax.io/d-img/dynamic-apps/img/phphkcbpm-a62b978855.png)
+@snapend()
+@snap[north span-80]
+<br><br>
+** @css[color-blue](Je crois qu'on a une boucle infinie) **
+@snapend()
+@snap[south span-80]
+** @css[color-blue](Je crois qu'on a une boucle infinie) **
+<br><br>
+@snapend()
+
+---?image=pitch/back-purple.png
+
+@snap[west text-left span-80]
+@css[text-18](**@css[color-purple](Quatrième problème)**)
+Attention aux limites
 @snapend()
 
 ---?image=pitch/back-purple.png
 
 @snap[west text-left span-70]
-@css[text-18](** @css[color-purple](POURQUOI?) **)
+@css[text-18](** @css[color-purple](Solutions?)**)
+<br>
+@ul
+- Optimiser, Optimiser, Optimiser
+- Séparer les opérations en plusieurs transactions?
+@ulend
 @snapend()
 
----?image=pitch/back-purple.png
+---
+@snap[midpoint span-80]
+![Never gonna work](https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/1676989.png)
+@snapend()
+@snap[north span-80]
 
-@snap[west text-left span-70]
-@css[text-18](**Sans <br> @css[color-purple](AUTHORITÉ CENTRALE) **)
+** @css[color-blue](Est-ce que quelqu'un peut nous dire) **
+@snapend()
+@snap[south span-80]
+** @css[color-blue](POURQUOI?) **
+<br>
 @snapend()
 
----?image=pitch/back-purple.png
+---?image=pitch/back-blue.png
 
 @snap[west text-left span-70]
-@css[text-18](**Internet de la @css[color-purple](VALEUR) **)
-Monnaie et code dans la même transaction
+@css[text-18](** @css[color-blue](POURQUOI?) **)
+@ul
+- **Sans @css[color-blue](AUTORITÉ CENTRALE) **
+- **@css[color-blue](ARGENT) et @css[color-blue](CODE) dans la même transaction**
+- **Utilisateur @css[color-blue](PROPRIÉTAIRE) <br> de ses données**
+@ulend
 @snapend()
 
----?image=pitch/back-purple.png
-
-@snap[west text-left span-70]
-@css[text-18](**Utilisateur @css[color-purple](PROPRIÉTAIRE) <br> de ses données**)
+---
+@snap[midpoint span-80]
+![Never gonna work](https://www.cryptokitties.co/images/landing/fanciesFront.png)
+@snapend()
+@snap[north span-80]
+<br><br>
+** @css[color-blue](Quand même cool ton jeu) **
+@snapend()
+@snap[south span-80]
+** @css[color-blue](Je me cherche justement un sideline) **
+<br><br>
 @snapend()
 
----?image=pitch/back-cyan.png
+
+---?image=pitch/back-blue.png
 
 @snap[west text-left span-70]
-@css[text-18](** La compétition <br> @css[color-cyan](CARDANO) <br> @css[color-cyan](EOS) <br> @css[color-cyan](Plasma/MATIC) <br> @css[color-cyan](Your Token here?!) **)
-@snapend()
-
----?image=pitch/back-cyan.png
-
-@snap[west text-left span-70]
-@css[text-18](** @css[color-cyan](CRYPTOWARS) **)
+@css[text-18](** @css[color-blue](CRYPTOWARS) **)
 @css[text-08](http://github.com/matdurand/cryptowars)
 @css[text-08](Demo on the Rinkeby testnet: http://cryptowars.fun?account=YOUR_PRIVATE_KEY)
 @css[text-18](** @css[color-red](NOT PROD READY) **)

@@ -1,4 +1,5 @@
-theme-background: ["linear-gradient(180deg, white 75%, black 25%)"]
+theme: template
+theme-background: ["white"]
 theme-headline: ["Montserrat", "#9a9a9a", "none"]
 theme-byline: ["Montserrat", "#9a9a9a", "none"]
 theme-text: ["Raleway", "#9a9a9a", "none"]

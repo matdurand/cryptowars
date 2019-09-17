@@ -9,5 +9,5 @@ const warriorContract = new web3.eth.Contract(
 const mainAccount = "... my address ...";
 const playerAccount = "... another player address ...";
 const warriorIds = await warriorContract.methods
-  .getWarriorsByOwner(slayerAccount)
+  .getWarriorsByOwner(playerAccount)
   .call({ from: mainAccount });
